@@ -1,0 +1,190 @@
+:root {
+       --main-color: #216af3;
+}
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+body {
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+              Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+              sans-serif;
+       background-color: var(--main-color);
+}
+.container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       padding-left: 10px;
+       padding-right: 10px;
+}
+.start-btn {
+       background-color: white;
+       padding: 12px;
+       border-radius: 10px;
+       font-size: 30px;
+       color: var(--main-color);
+       font-weight: 600;
+       cursor: pointer;
+}
+.quiz-info {
+       background-color: #fff;
+       border-radius: 5px;
+}
+.quiz-info h2 {
+       padding: 10px 20px;
+}
+.quiz-info .main-rules {
+       padding: 20px;
+       border-top: 2px solid #eee;
+       border-bottom: 2px solid #eee;
+}
+.quiz-info .main-rules p {
+       font-size: 20px;
+}
+.quiz-info .main-rules p:not(:last-of-type) {
+       margin-bottom: 8px;
+}
+.quiz-info .main-rules p span {
+       color: var(--main-color);
+       font-weight: 700;
+}
+.quiz-info .btn-group {
+       padding: 10px 20px;
+       display: flex;
+       justify-content: flex-end;
+       gap: 10px;
+}
+.quiz-info .btn-group button {
+       border: none;
+       outline: none;
+       padding: 7px 14px;
+       font-size: 18px;
+       font-weight: 700;
+       border-radius: 5px;
+       cursor: pointer;
+}
+.quiz-info .btn-group button.exit-btn {
+       background-color: white;
+       border: 2px solid var(--main-color);
+       color: var(--main-color);
+}
+.quiz-info .btn-group button.continue-btn {
+       background-color: var(--main-color);
+       color: white;
+}
+.hide {
+       display: none;
+}
+.question-part {
+       background-color: white;
+       border-radius: 5px;
+       width: 600px;
+       max-width: 100%;
+}
+.question-part .header {
+       padding: 10px 20px;
+       position: relative;
+}
+.question-part .header h2 {
+       background-color: #bbe1ff;
+       color: #0044c3;
+       padding: 10px;
+       border-radius: 5px;
+       font-weight: 600;
+       font-size: 30px;
+       width: fit-content;
+       margin: auto;
+}
+.question-part .header h2 span {
+       background-color: #333;
+       color: white;
+       border-radius: 5px;
+       padding: 5px;
+}
+.question-part .header > span {
+       width: 100%;
+       height: 2px;
+       background-color: var(--main-color);
+       display: block;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       z-index: 1000;
+}
+.question-part .main-question {
+       padding: 20px;
+       border-top: 2px solid #eee;
+       border-bottom: 2px solid #eee;
+}
+.question-part .main-question h2 {
+       font-size: 30px;
+       margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+       .question-part .main-question h2 {
+              font-size: 25px;
+       }
+}
+.question-part .main-question p {
+       font-size: 20px;
+       margin-bottom: 8px;
+       background-color: #dbefff;
+       padding: 10px;
+       border-radius: 5px;
+       cursor: pointer;
+}
+.question-part .footer {
+       padding: 10px 20px;
+}
+.question-part .footer p {
+       font-size: 18px;
+}
+.question-part .footer p span {
+       font-size: 20px;
+       font-weight: bold;
+}
+.question-part .main-question p.false {
+       background-color: #ff9c9c;
+}
+.question-part .main-question p.right {
+       background-color: #9cff9c;
+}
+.result {
+       background-color: white;
+       border-radius: 5px;
+       padding: 20px;
+       text-align: center;
+}
+.result img {
+       max-width: 200px;
+       margin-bottom: 20px;
+}
+.result p {
+       font-size: 20px;
+}
+.result p span {
+       font-size: 25px;
+       font-weight: bold;
+}
+.block {
+       pointer-events: none;
+}
+footer {
+       position: fixed;
+       bottom: 0;
+       background-color: #fff;
+       display: block;
+       width: 100%;
+       text-align: center;
+       padding: 10px;
+       font-size: 17px;
+       color: var(--main-color);
+}
+footer a {
+       text-decoration: none;
+       color: #0044c3;
+       font-weight: bold;
+}

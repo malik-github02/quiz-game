@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Html Quiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="start-btn">
+            Start Quiz
+        </div>
+
+        <div class="quiz-info hide">
+            <h2>Some Rules of this Quiz</h2>
+            <div class="main-rules">
+                <p>1. You will have only <span>15 seconds</span> per each question.</p>
+                <p>2. Once you select your answer , it can't be undone.</p>
+                <p>3. You can't select any option once time goes off.</p>
+                <p>4. You can't exit from the Quiz while you're playing.</p>
+                <p>5. You'll get points on the basis of your correct ansers.</p>
+            </div>
+            <div class="btn-group">
+                <button class="exit-btn">Exit Quiz</button>
+                <button class="continue-btn">Continue</button>
+            </div>
+        </div>
+
+        <div class="question-part hide">
+            <div class="header">
+                <h2>Time Left <span>10</span></h2>
+                <span></span>
+            </div>
+            <div class="main-question">
+            </div>
+            <div class="footer">
+                <p><span class="of-all">1</span> of <span class="from-all">5</span> Questions</p>
+            </div>
+        </div>
+
+        <div class="result hide">
+            <img src="pngwing.com (8).png" alt="photo">
+            <p>you have passed <span class="last-score">5</span> from <span class="last-from-score">10</span> question
+            </p>
+        </div>
+    </div>
+
+
+
+    <audio src="success.aac" preload="auto" class="success"></audio>
+    <audio src="fail.wav" preload="auto" class="fail"></audio>
+
+    <footer>
+        Developed By <a href="https://www.facebook.com/abdalmalik.kattan" target="_blank">Malik</a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
