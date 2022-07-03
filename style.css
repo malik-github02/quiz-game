@@ -138,6 +138,9 @@ body {
 }
 .question-part .footer {
        padding: 10px 20px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
 }
 .question-part .footer p {
        font-size: 18px;
@@ -145,6 +148,16 @@ body {
 .question-part .footer p span {
        font-size: 20px;
        font-weight: bold;
+}
+.question-part .footer button {
+       background-color: var(--main-color);
+       border: none;
+       outline: none;
+       padding: 6px 12px;
+       color: #fff;
+       font-size: 18px;
+       border-radius: 5px;
+       cursor: pointer;
 }
 .question-part .main-question p.false {
        background-color: #ff9c9c;
