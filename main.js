@@ -113,23 +113,7 @@ continueBtn.addEventListener('click', () => {
 function timeLess() {
        let timer = setInterval(function () {
               if (timeLeft.innerHTML == '0') {
-                     if (scoreDator == true) {
-                            score++;
-                     }
-                     if (i == questions.length - 1) {
-                            clearInterval(timer);
-                            result.classList.remove('hide');
-                            quizPart.classList.add('hide');
-                            lastScore.innerHTML = score;
-                            lastFromScore.innerHTML = questions.length;
-                     } else {
-                            i++;
-                     }
-                     mainQuestion.innerHTML = '';
-                     mainQuestion.classList.remove('block');
-                     showTest();
-                     span.style.width = '100%';
-                     scoreDator = false;
+                     main();
               } else {
                      timeLeft.innerHTML -= 1;
                      span.style.width = `${
@@ -160,6 +144,7 @@ function showTest() {
 function clickOnTheRightAnswer() {
        tank.forEach((ele) => {
               ele.addEventListener('click', () => {
+                     document.querySelector('.next').classList.remove('hide');
                      mainQuestion.classList.add('block');
                      if (ele.textContent === questions[i].rightAnswer) {
                             scoreDator = true;
@@ -177,4 +162,28 @@ function clickOnTheRightAnswer() {
                      });
               });
        });
+}
+
+document.querySelector('.next').onclick = function () {
+       main();
+};
+
+function main() {
+       if (scoreDator == true) {
+              score++;
+       }
+       if (i >= questions.length - 1) {
+              result.classList.remove('hide');
+              quizPart.classList.add('hide');
+              lastScore.innerHTML = score;
+              lastFromScore.innerHTML = questions.length;
+       } else {
+              i++;
+       }
+       document.querySelector('.next').classList.add('hide');
+       mainQuestion.innerHTML = '';
+       mainQuestion.classList.remove('block');
+       showTest();
+       span.style.width = '100%';
+       scoreDator = false;
 }
